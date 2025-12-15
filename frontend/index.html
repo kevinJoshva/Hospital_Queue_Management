@@ -18,8 +18,8 @@
                 <form action="#" class="sign-in-form" >
                     
                     <h2 class="title">Sign in</h2>
-                        <input class="input-field" type="text" id="loginUsername" required placeholder="Email">
-                        <input   class="input-field" type="password" id="loginPassword" required placeholder="Password">
+                        <input class="input-field" type="text" id="loginUsername" name="username" required placeholder="Email">
+                        <input   class="input-field" type="password" id="loginPassword" name="password" required placeholder="Password">
                         <a href=""><p>Forgot password?</p></a>
                     <button type="submit" class="btn">Login</button>
                     <p class="error-msg" id="loginError"></p>
@@ -30,13 +30,13 @@
                 <form action="#" class="sign-up-form" id="signUpForm" style="display: none;">
                     <h2 class="title">Sign up</h2>
                     <div class="signupform" >
-                        <input class="input-field" type="text" placeholder="First Name" required>
-                        <input class="input-field" type="text" placeholder="Last Name" required>
+                        <input class="input-field" type="text" placeholder="First Name" name="firstname" required>
+                        <input class="input-field" type="text" placeholder="Last Name" name="lastname">
                     </div>
                     <div style="display: flex; gap: 20px; justify-content: center;align-items: center;"><label style="margin-top: 20px;" for="">Date-Of-Birth :</label><input class="input-field" type="date" id="date"></div>
                     
-                        <input class="input-field" type="email" id="signupEmail" required placeholder="Email">
-                        <input class="input-field" type="password" id="signupPassword" required placeholder="Password">
+                        <input class="input-field" type="email" id="signupEmail" name="username" placeholder="Email">
+                        <input class="input-field" type="password" id="signupPassword"name="password" required placeholder="Password">
                     <button type="submit" class="btn">Sign Up</button>
                     <p class="error-msg" id="signupError"></p>
                 </form>
