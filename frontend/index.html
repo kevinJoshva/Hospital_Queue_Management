@@ -6,59 +6,61 @@
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-    <div class="container">
-        
-        <div class="forms-container">
-            <h1 id="t">Hospital Queue Management</h1>
-            <div class="signin-signup">
-                <!-- Login Form --> 
-                 <div id="signInForm">
-                <form action="#" class="sign-in-form" >
-                    
-                    <h2 class="title">Sign in</h2>
-                        <input class="input-field" type="text" id="loginUsername" required placeholder="Email">
-                        <input   class="input-field" type="password" id="loginPassword" required placeholder="Password">
-                        <a href=""><p>Forgot password?</p></a>
-                    <button type="submit" class="btn">Login</button>
-                    <p class="error-msg" id="loginError"></p>
-                </form>
-                </div>
 
-                <!-- Signup Form -->
-                <form action="#" class="sign-up-form" id="signUpForm" style="display: none;">
-                    <h2 class="title">Sign up</h2>
-                    <div class="signupform" >
-                        <input class="input-field" type="text" placeholder="First Name" required>
-                        <input class="input-field" type="text" placeholder="Last Name" required>
-                    </div>
-                    <div style="display: flex; gap: 20px; justify-content: center;align-items: center;"><label style="margin-top: 20px;" for="">Date-Of-Birth :</label><input class="input-field" type="date" id="date"></div>
-                    
-                        <input class="input-field" type="email" id="signupEmail" required placeholder="Email">
-                        <input class="input-field" type="password" id="signupPassword" required placeholder="Password">
-                    <button type="submit" class="btn">Sign Up</button>
-                    <p class="error-msg" id="signupError"></p>
-                </form>
-            </div>
-        </div>
+<div class="auth-wrapper">
+  <div class="auth-card">
 
-        <!-- Panels for animation -->
-        <div class="panels-container">
-            <div class="panel left-panel" id="signUpPanel">
-                <div class="content">
-                    <h3>New here?</h3>
-                    <p>Register now to manage hospital queues efficiently.</p>
-                    <button class="btn transparent" id="signUpBtn" onclick="handleSignUpForm()">Sign Up</button>
-                </div>
-            </div>
-            <div class="panel right-panel" id="signInPanel" style="display: none;">
-                <div class="content">
-                    <h3>Already have an account?</h3>
-                    <p>Sign in to access the hospital queue dashboard.</p>
-                    <button class="btn transparent" id="signInBtn" onclick="handleSignInForm()">Sign In</button>
-                </div>
-            </div>
-        </div>
+    <!-- LEFT PANEL -->
+    <div class="auth-left">
+      <h1>Hospital Queue</h1>
+      <p>Smart queue management for faster healthcare</p>
     </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="auth-right">
+
+      <!-- LOGIN -->
+      <form class="form login active">
+        <h2>Login</h2>
+
+        <input id="loginEmail" type="email" placeholder="Email" required />
+        <input id="loginPassword" type="password" placeholder="Password" required />
+
+        <select id="loginRole">
+          <option value="">Select Role</option>
+          <option>ADMIN</option>
+          <option>DOCTOR</option>
+          <option>RECEPTIONIST</option>
+          <option>PATIENT</option>
+        </select>
+
+        <button type="button" onclick="login()">Login</button>
+        <p class="switch">New user? <span onclick="toggle()">Create account</span></p>
+      </form>
+
+      <!-- SIGNUP -->
+      <form class="form signup">
+        <h2>Create Account</h2>
+
+        <input id="name" type="text" placeholder="Full Name" />
+        <input id="email" type="email" placeholder="Email" />
+        <input id="mobile" type="text" placeholder="Mobile Number" />
+        <input id="password" type="password" placeholder="Password" />
+
+        <select id="role">
+          <option value="">Select Role</option>
+          <option>PATIENT</option>
+          <option>DOCTOR</option>
+          <option>RECEPTIONIST</option>
+        </select>
+
+        <button type="button" onclick="signup()">Register</button>
+        <p class="switch">Already registered? <span onclick="toggle()">Login</span></p>
+      </form>
+
+    </div>
+  </div>
+</div>
 
 <script defer src="../javascript/app.js"></script>
 </body>
